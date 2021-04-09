@@ -47,6 +47,10 @@ export default {
     };
   },
   computed: {
+    /**
+     * Filter list by search item
+     * @returns {({path: string, name: string, id: number}|{path: string, name: string, id: number}|{path: string, name: string, id: number}|{path: string, name: string, id: number})[]}
+     */
     filteredList: function() {
       return this.list.filter((e) => {
         return (
