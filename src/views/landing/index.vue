@@ -1,6 +1,6 @@
 <template>
   <div class="page-container">
-    <!-- TODO: Make it to search component-->
+    <!-- TODO: Make it to search component -->
     <div class="search-box">
       <form>
         <md-field md-clearable>
@@ -11,7 +11,7 @@
     </div>
     <div class="result-container">
       <h1>{{ filteredList.length }} datasets found</h1>
-      <!-- TODO: Make it to dataset component-->
+      <!-- TODO: Make it to dataset component -->
       <div class="result-content" v-for="item in filteredList" :key="item.id">
         <p class="name">{{ item.name }}</p>
         <a :href="`${publicPath}${item.path}`" target="_blank" download>csv</a>
@@ -50,8 +50,8 @@ export default {
     filteredList: function() {
       return this.list.filter((e) => {
         return (
-            e.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
-            e.path.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+          e.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+          e.path.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
         );
       });
     },
